@@ -1,9 +1,4 @@
-interface FormProps {
-  task: string;
-  deadline: string;
-  handleChange(e: React.ChangeEvent<HTMLInputElement>): void;
-  addTask(): void ;
-}
+import { FormProps } from "../interfaces";
 
 const Form = ({task, deadline, handleChange, addTask}: FormProps) => {
   return (
