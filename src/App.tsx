@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
 import {Task} from './interfaces';
 import TodoTask from './components/TodoTask';
+import Form from "./components/Form"
 import './App.css';
 
 function App() {
   const [task, setTask] = useState<string>("");
-  const [deadline, setDeadline] = useState<number>(0);
+  const [deadline, setDeadline] = useState<string>("");
   const [todo, setTodo] = useState<Task[]>([]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.target.name === 'task' ? setTask(e.target.value) : setDeadline(Number(e.target.value));
+    e.target.name === 'task' ? setTask(e.target.value) : setDeadline(e.target.value);
   };
 
   const addTask = () => {
@@ -30,26 +31,13 @@ function App() {
   
   return (
     <div className="App">
-      <div className='header'>
-        <form onSubmit={e => e.preventDefault()}>
-          <div className='inputContainer'>
-            <input 
-              type="text" 
-              name='task' 
-              placeholder='Add a task' 
-              value={task}
-              onChange={handleChange}
-            />
-            <input 
-              type="text" 
-              name='deadline' 
-              placeholder='Set a deadline (in days)'
-              value={deadline}
-              onChange={handleChange}
-            />
-          </div>
-          <button onClick={addTask}>Add</button>
-        </form>
+      <div>
+        <Form 
+          task={task}
+          deadline={deadline}
+          handleChange={handleChange}
+          addTask={addTask}
+        />
       </div>
       <div className='todolist'>
         {taskItems}
