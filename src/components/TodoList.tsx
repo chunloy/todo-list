@@ -10,9 +10,17 @@ const TodoList = ({todo, completeTask}: TodoListProps) => {
   });
 
   return (
-    <div>
-      {taskItems}
-    </div>
+    <table>
+      <thead>
+        <th>Task</th>
+        <th>Deadline</th>
+        <th>Actions</th>
+      </thead>
+
+      <tbody>
+        {taskItems}
+      </tbody>
+    </table>
   )
 }
 

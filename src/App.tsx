@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Task} from './interfaces';
-import TodoListItem from './components/TodoListItem';
 import Form from "./components/Form"
 import TodoList from './components/TodoList';
 import './App.css';

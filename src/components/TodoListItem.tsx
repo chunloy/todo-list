@@ -2,13 +2,13 @@ import {TodoListItemProps} from "../interfaces";
 
 const todoListItem = ({todo, completeTask}: TodoListItemProps) => {
   return (
-    <div className="task">
-      <div className="content">
-        <span>{todo.taskName}</span>
-        <span>{todo.deadline}</span>
+    <tr>
+      <td>{todo.taskName}</td>
+      <td>{todo.deadline}</td>
+      <td>
         <button onClick={() => {completeTask(todo.taskName)}}>x</button>
-      </div>
-    </div>
+      </td>
+    </tr>
   )
 };
 
