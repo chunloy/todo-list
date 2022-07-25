@@ -5,7 +5,7 @@ export interface Task {
 export interface FormProps {
   task: string;
   deadline: string;
-  handleChange(e: React.ChangeEvent<HTMLInputElement>): void;
+  handleChange(e: React.ChangeEvent): void;
   addTask(): void;
 }
 

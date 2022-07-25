@@ -10,17 +10,19 @@ const TodoList = ({todo, completeTask}: TodoListProps) => {
   });
 
   return (
-    <table>
-      <thead>
-        <th>Task</th>
-        <th>Deadline</th>
-        <th>Actions</th>
-      </thead>
+    <div className="is-flex is-justify-content-center mt-6">
+      <table className="table">
+        <thead>
+          <th>Task</th>
+          <th>Deadline</th>
+          <th>Actions</th>
+        </thead>
 
-      <tbody>
-        {taskItems}
-      </tbody>
-    </table>
+        <tbody>
+          {taskItems}
+        </tbody>
+      </table>
+    </div>
   )
 }
 

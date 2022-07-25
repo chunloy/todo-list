@@ -4,9 +4,11 @@ const todoListItem = ({todo, completeTask}: TodoListItemProps) => {
   return (
     <tr>
       <td>{todo.taskName}</td>
-      <td>{todo.deadline}</td>
-      <td>
-        <button onClick={() => {completeTask(todo.taskName)}}>x</button>
+      <td className="has-text-centered">{todo.deadline}</td>
+      <td className="has-text-centered">
+        <button className="button is-danger" onClick={() => {completeTask(todo.taskName)}}>
+          <i className="fa-solid fa-trash-can"></i>
+        </button>
       </td>
     </tr>
   )
