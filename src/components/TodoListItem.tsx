@@ -1,4 +1,5 @@
 import {TodoListItemProps} from "../interfaces";
+import "./TodoListItem.css"
 
 const todoListItem = ({todo, completeTask}: TodoListItemProps) => {
   return (

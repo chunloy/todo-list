@@ -23,7 +23,7 @@ const Form = ({task, deadline, handleChange, addTask}: FormProps) => {
         />
           
         <div className="is-flex is-justify-content-center"> 
-          <button className="button m-1" onClick={addTask}>Add Task</button>
+          <button className="button is-link is-light m-1" onClick={addTask}>Add Task</button>
         </div>
       </form>
     </div>

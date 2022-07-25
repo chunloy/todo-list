@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Task} from './interfaces';
+import {Task, HandleChange} from './interfaces';
 import Form from "./components/Form"
 import TodoList from './components/TodoList';
 import './App.css';
@@ -24,7 +24,7 @@ function App() {
   const [deadline, setDeadline] = useState<string>("");
   const [todo, setTodo] = useState(fakeData);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange: HandleChange = (e) => {
     e.target.name === 'task' ? setTask(e.target.value) : setDeadline(e.target.value);
   };
 

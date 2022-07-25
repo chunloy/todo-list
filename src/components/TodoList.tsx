@@ -1,7 +1,6 @@
 import {TodoListProps} from "../interfaces"
 import TodoListItem from "./TodoListItem"
 
-
 const TodoList = ({todo, completeTask}: TodoListProps) => {
   const taskItems = todo.map((item, key) => {
     return (
@@ -13,9 +12,11 @@ const TodoList = ({todo, completeTask}: TodoListProps) => {
     <div className="is-flex is-justify-content-center mt-6">
       <table className="table">
         <thead>
-          <th>Task</th>
-          <th>Deadline</th>
-          <th>Actions</th>
+          <tr>
+            <th>Task</th>
+            <th>Deadline</th>
+            <th>Actions</th>
+          </tr>
         </thead>
 
         <tbody>
