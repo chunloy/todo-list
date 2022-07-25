@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Task, HandleChange} from './interfaces';
+import {Task, AddTask, CompleteTask, HandleChange} from './interfaces';
 import Form from "./components/Form"
 import TodoList from './components/TodoList';
 import './App.css';
@@ -28,11 +28,11 @@ function App() {
     e.target.name === 'task' ? setTask(e.target.value) : setDeadline(e.target.value);
   };
 
-  const addTask = () => {
+  const addTask: AddTask = () => {
     setTodo([...todo, {taskName: task, deadline: deadline}])
   }
 
-  const completeTask = (taskNameToDelete: string) => {
+  const completeTask: CompleteTask = (taskNameToDelete) => {
     setTodo(todo.filter((task) => {
       return task.taskName !== taskNameToDelete;
     }));
