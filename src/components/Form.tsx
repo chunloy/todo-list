@@ -2,7 +2,7 @@ import { FormProps } from "../interfaces";
 
 const Form = ({task, deadline, handleChange, addTask}: FormProps) => {
   return (
-    <div className="is-flex is-justify-content-center">
+    <div className="is-flex is-justify-content-center mt-3">
       <form onSubmit={e => e.preventDefault()}>
         <input 
           className="input is-primary m-1"

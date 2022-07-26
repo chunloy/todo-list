@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Task, AddTask, CompleteTask, HandleChange} from './interfaces';
+import Header from './components/Header';
 import Form from "./components/Form"
 import TodoList from './components/TodoList';
 import './App.css';
@@ -40,6 +41,7 @@ function App() {
   
   return (
     <div className="container">
+      <Header/>
       <Form 
         task={task}
         deadline={deadline}
