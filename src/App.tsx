@@ -1,29 +1,15 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {Task, AddTask, CompleteTask, HandleChange} from './interfaces';
 import Header from './components/Header';
 import Form from "./components/Form"
 import TodoList from './components/TodoList';
 import './App.css';
-
-const fakeData: Task[] = [
-  {
-    taskName: "Five on Flat for Mollie",
-    deadline: "1"
-  },
-  {
-    taskName: "Kickflip 11's for Pocket",
-    deadline: "1"
-  },
-  {
-    taskName: "Ninja Training at Poods Park",
-    deadline: "2"
-  },
-]
+import { fakeData } from './fakeData';
 
 function App() {
   const [task, setTask] = useState<string>("");
   const [deadline, setDeadline] = useState<string>("");
-  const [todo, setTodo] = useState(fakeData);
+  const [todo, setTodo] = useState<Task[]>(fakeData);
 
   const handleChange: HandleChange = (e) => {
     e.target.name === 'task' ? setTask(e.target.value) : setDeadline(e.target.value);
